@@ -1,1 +1,5 @@
+<app-top-menu (showSidebar)="displaySidebar = true"></app-top-menu>
+
+<app-sidebar [displaySidebar]="displaySidebar" (hideSidebar)="displaySidebar = false"></app-sidebar>
+
 <router-outlet></router-outlet>
