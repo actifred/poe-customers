@@ -1,1 +1,5 @@
-<p>user-card works!</p>
+<div class="user-card">
+    <h1>{{ user | userFullName }}</h1>
+    <a class="nat-button" routerLink="/user/{{ user.id }}">Details</a>
+    <a class="nat-button" (click)="onDelete()">Supprimer</a>
+</div>

@@ -2,6 +2,7 @@
 a.nat-button {
     min-width: 80px;
     padding: 5px 10px;
+    margin: 2px 8px;
     border-radius: 3px;
     background-color: chocolate;
     color: white;
