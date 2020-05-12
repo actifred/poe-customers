@@ -1,9 +1,12 @@
-<!--p>ligne-liste-customers works!</p-->
-<!--tr><td>{{currentUser.id}}</td><td>Jacques</td><td>Célère</td></tr-->
 <tr>
-    <td>{{currentUser.id}}</td>
-    <td>{{currentUser.firstname}}</td>
-    <td>{{currentUser.lastname}}</td>
-    <td>{{currentUser.email}}</td>
-    <td>{{currentUser.avatar}}</td>
+    <td data-col="prenom">{{currentUser.firstname}}</td>
+    <td data-col="nom">   {{currentUser.lastname}} </td>
+    <td data-col="mail">  {{currentUser.email}}    </td>
+    <td data-col="avatar">
+        <img class="user-avatar" src="{{currentUser.avatar}}" alt="{{currentUser.avatar}}"/>
+    </td>
+    <td data-col="id">{{currentUser.id}}
+        <button>détail</button>
+        <button>supprimer</button>
+    </td>
 </tr>

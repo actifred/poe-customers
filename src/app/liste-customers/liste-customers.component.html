@@ -1,12 +1,16 @@
-<p>liste-customers works!</p>
 <div class="toolbar">
-    <!--button (click)="loadUsers()">Charger les utilisateurs</button-->
     <table>
-        <thead><tr><th>Id</th><th>Prénom</th><th>Nom</th></tr></thead>
+        <!--thead>
+            <tr>
+                <th data-col="id">     Id</th>
+                <th data-col="prenom"> Prénom</th>
+                <th data-col="nom">    Nom</th>
+                <th data-col="mail">   Mail</th>
+                <th data-col="avatar"> Avatar</th>
+            </tr>
+        </thead-->
         <tbody>
             <app-ligne-liste-customers *ngFor="let user of users" [currentUser]="user"></app-ligne-liste-customers>
-            <!--app-ligne-liste-customers *ngFor="let user of users"></app-ligne-liste-customers-->
-            <!--tr *ngFor><td>0</td><td>Jacques</td><td>Célère</td></tr-->
         </tbody>
     </table>
 </div>

@@ -1,0 +1,15 @@
+tr:nth-child(2n+1)  {background-color:#AACCAA;}
+tr:nth-child(2n)    {background-color:#CCAACC;} 
+td {border:0px solid #004400;padding:1px;vertical-align:text-top;}
+td[data-col="id"]     {width:150px;} 
+td[data-col="prenom"] {width:120px;}
+td[data-col="nom"]    {width:120px;}  
+td[data-col="mail"]   {width:250px;}  
+td[data-col="avatar"] {width:100px;}
+
+img.user-avatar {
+    border-radius: 50%; /* image ronde */
+    float:none;
+    max-width: 96px;
+	height: auto;
+}
