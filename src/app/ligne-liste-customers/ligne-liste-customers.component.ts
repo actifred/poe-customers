@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from 'protractor';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-ligne-liste-customers',
@@ -7,9 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LigneListeCustomersComponent implements OnInit {
   @Input() public currentUser:any;
-  constructor() { }
+  @Output() supprimeEvent = new EventEmitter();
+
+  constructor(private httpClient:HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  public supprime(detailEvenement) {
+    console.log('Clic reçu', detailEvenement);
+    this.httpClient.delete('http://localhost:3000/delete/' + this.currentUser.id);
+    //this.supprimeEvent.emit(this.currentUser);
   }
 
 }

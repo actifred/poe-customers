@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { UserManagerService } from '../services/user-manager.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class ListeCustomersComponent implements OnInit {
   public users = [];
   
   constructor(private userManager: UserManagerService) { }
-
+  
   ngOnInit(): void {
     console.log("ListeCustomersComponent.ngOnInit");
     this.loadUsers();
