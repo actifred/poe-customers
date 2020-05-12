@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, NgModuleFactoryLoader } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class UserManagerService {
@@ -53,4 +53,9 @@ export class UserManagerService {
             return this.users[nextUserIndex];
         return null;
     }
+
+    public supprime(id:number):Observable<any> {
+        console.log("appel du delete pour l'utilisateur d'id " + id);
+        return this.httpClient.delete('http://localhost:3000/users/' + id);
+      }
 }
