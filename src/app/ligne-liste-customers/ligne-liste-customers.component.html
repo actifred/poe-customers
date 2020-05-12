@@ -6,7 +6,7 @@
         <img class="user-avatar" src="{{currentUser.avatar}}" alt="{{currentUser.avatar}}"/>
     </td>
     <td data-col="id">{{currentUser.id}}
-        <button>détail</button>
+        <button (click)="detailUser($event)">détail</button>
         <button (click)="supprimeUser($event)">supprimer</button>
     </td>
 </tr>

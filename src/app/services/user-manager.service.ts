@@ -58,4 +58,9 @@ export class UserManagerService {
         console.log("appel du delete pour l'utilisateur d'id " + id);
         return this.httpClient.delete('http://localhost:3000/users/' + id);
       }
+
+      public fiche(id:number):Observable<any> {
+        console.log("appel de la fiche pour l'utilisateur d'id " + id);
+        return this.httpClient.get('http://localhost:3000/users/' + id);
+      }
 }

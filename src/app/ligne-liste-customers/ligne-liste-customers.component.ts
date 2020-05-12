@@ -17,7 +17,7 @@ export class LigneListeCustomersComponent implements OnInit {
   ngOnInit(): void {}
 
   public supprimeUser(detailEvenement) {
-    console.log('Clic reçu', detailEvenement);
+    console.log('Clic reçu sur delete', detailEvenement);
     if (this.currentUser == null) {
       console.log("id NULL !");
       return;
@@ -34,20 +34,28 @@ export class LigneListeCustomersComponent implements OnInit {
     () => {
       console.log('requête finie');
     });;
-    /*
-    this.httpClient.delete('http://localhost:3000/users/' + this.currentUser.id).subscribe( 
+    
+  }
+
+  public detailUser(detailEvenement) {
+    console.log('Clic reçu sur detail', detailEvenement);
+    if (this.currentUser == null) {
+      console.log("id NULL !");
+      return;
+    }
+    console.log("appel de la fiche de l'utilisateur d'id " + this.currentUser.id);
+    this.userManager.fiche(this.currentUser.id).subscribe( 
       res => {
-        console.log("pan !");
-        //this.users = res;
+        console.log("récupération des détails !");
+        this.currentUser = res;
       },
     erreur => {
       console.log('erreur get', erreur);
     },
     () => {
       console.log('requête finie');
-    });
-    //this.supprimeEvent.emit(this.currentUser);
-    */
-  }
+    });;
+    
 
+  }
 }
