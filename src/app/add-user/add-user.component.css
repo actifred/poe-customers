@@ -1,0 +1,29 @@
+
+
+.nat-card {
+    border: solid 1px #264653;
+    margin: 10px 40px;
+    text-align: center;
+    background-color: #2a9d8f;
+    color: #eeeeee;
+    font-family: Arial;
+    
+    width: 300px;
+
+
+}
+
+.contenant {
+    display: flex;
+    justify-content: center;
+    background-color: gainsboro;
+    border: solid 1px red;
+}
+
+.user {
+    color: black;
+}
+
+.img {
+    margin: 10px;
+}

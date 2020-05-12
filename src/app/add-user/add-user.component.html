@@ -1,0 +1,11 @@
+<div class = "contenant">
+    <form class = "nat-card"
+    #monFormulaire="ngForm"
+    (ngSubmit)="post(monFormulaire.value)">
+        <div class = "user">Firstname : <input type="text" name="firstname">  </div>
+        <div class="user">Lastname : <input type="text" name="lastname"></div>
+        <div class="user">Email : <input type="text" name="email"></div>
+        <div class="user">Avatar : <input type="text" name="avatar"></div>
+        <div><button class = "button" [routerLink]=goUsers()>Retour</button><button class = "button" type="submit" [routerLink]=goUsers()>Ajouter</button></div>
+    </form>
+</div>

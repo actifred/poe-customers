@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,8 @@ import { TopMenuComponent } from './layout/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserServiceService } from './service/user-service.service';
 import { UsersComponent } from './users/users.component';
-import { UnserDetailsComponent } from './unser-details/unser-details.component'
+import { UnserDetailsComponent } from './unser-details/unser-details.component';
+import { AddUserComponent } from './add-user/add-user.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { UnserDetailsComponent } from './unser-details/unser-details.component'
     TopMenuComponent,
     SidebarComponent,
     UsersComponent,
-    UnserDetailsComponent
+    UnserDetailsComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,9 @@ import { UnserDetailsComponent } from './unser-details/unser-details.component'
     SidebarModule,
     FontAwesomeModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

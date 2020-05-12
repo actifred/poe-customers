@@ -21,8 +21,6 @@ export class SidebarComponent implements OnInit {
     this.hideSidebar.emit();
   }
 
-  public showUsers() {
-    this.isUserOn = true;
-  }
+
 
 }

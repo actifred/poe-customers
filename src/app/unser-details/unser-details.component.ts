@@ -25,16 +25,9 @@ export class UnserDetailsComponent implements OnInit {
       }
     );
 
-    this.myUserService.getUsers().subscribe(data => {
-      this.users = data;
-      console.log(data[0])
-      this.users.forEach(user => {
-        if (user.id == this.currentUserId){
-          this.user = user;
-        }
-      });
-      
-  })
+    this.myUserService.getUserById(this.currentUserId).subscribe(data => {
+      this.user = data
+    })
   }
 
   goUsers() {
@@ -43,7 +36,7 @@ export class UnserDetailsComponent implements OnInit {
 
   delete() {
     this.myUserService.delete(this.currentUserId)
-    
+
   }
 
 
