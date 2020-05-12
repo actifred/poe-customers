@@ -13,14 +13,13 @@ export class UserManagerService {
 
     public getUsers(): Observable<any> {
         return this.httpClient
-            /* .get('http://localhost:3000/users/')*/
-            .get('https://randomuser.me/api/?results=5')
+            .get('http://localhost:3000/users/')
             .pipe(
-                map(
+                /* pas de map ici. map(
                     (res: any) => {
                         return res.results;
                     } 
-                ),
+                ),*/
                 tap(resultat => {
                     this.users = resultat;
                     console.log('Le service a stocké en cache le tableau', this.users);
