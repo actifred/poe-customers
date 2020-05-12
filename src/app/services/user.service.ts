@@ -20,4 +20,8 @@ export class UserService {
     return this.httpClient.get<UserModel>(environment.apiUrl + `/users/${id}`);
   }
 
+  public deleteUser(id) {
+    return this.httpClient.delete<UserModel>(environment.apiUrl + `/users/${id}`);
+  }
+
 }
