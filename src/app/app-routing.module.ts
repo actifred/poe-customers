@@ -7,8 +7,12 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   { 
-    path: "",
+    path: "old",
     component: WelcomePageComponent
+  },
+  { 
+    path: "",
+    component: UserListComponent
   },
 { 
   path: "detail/:ID",

@@ -1,1 +1,6 @@
-<p>user-details works!</p>
+<div *ngIf="currentUser">
+<span>Nom : {{currentUser.firstname}}</span>
+<span>Prenom : {{currentUser.lastname}}</span>
+<span>Email : {{currentUser.email}}</span>
+<span><img src="currentUser.avatar" alt="{{currentUser.avatar}}"></span>
+</div>

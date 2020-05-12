@@ -10,14 +10,12 @@ export class UserListComponent implements OnInit {
   public userlist=[];
   constructor(private http:HttpClient) { }
     
-  ngOnInit(): void {
-   
-    }
-    public loadUsers() {
-    this.http.get("http://localhost:3000/users").subscribe(
+  ngOnInit(): void {   
+      this.http.get("http://localhost:3000/users").subscribe(
       (resultat:any)=>{this.userlist=resultat;
       console.log("resultat",resultat);})
     }
+    
     getliens(valeur:number){
         return `/detail/${valeur}`
     }
