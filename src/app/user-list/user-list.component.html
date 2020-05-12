@@ -1,0 +1,7 @@
+
+<div class="toolbar">
+    <button (click)="loadUsers()">Charger les utilisateurs</button>
+</div>
+<div class="userListe" *ngFor = "let user of  userlist">
+    <span>{{user.firstname}}  {{user.lastname}}  <a [routerLink]="getliens(user.id)">détails</a> </span>
+</div>
