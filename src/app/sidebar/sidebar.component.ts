@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
   @Input() displaySidebar;
 
   @Output() hideSidebar = new EventEmitter();
+  isUserOn = false;
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class SidebarComponent implements OnInit {
 
   public onHide() {
     this.hideSidebar.emit();
+  }
+
+  public showUsers() {
+    this.isUserOn = true;
   }
 
 }

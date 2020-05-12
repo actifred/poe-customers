@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../service/user-service.service';
+
+
 
 @Component({
   selector: 'app-welcome-page',
@@ -9,7 +12,12 @@ export class WelcomePageComponent implements OnInit {
 
   constructor() { }
 
+  
+
+
   ngOnInit(): void {
+    
+       
   }
 
 }

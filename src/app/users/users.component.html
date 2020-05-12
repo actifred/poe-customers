@@ -1,0 +1,10 @@
+<div class = "contenant">
+    <div class = "nat-card" *ngFor="let user of users">
+        <img class='img' src={{user.avatar}} alt="">
+        <div class="contains">
+            <div class = "user">{{ user.firstname }} {{ user.lastname }} </div>
+            <div><button class = "button" [routerLink]=goDetail(user.id)>Détails</button><button class = "button" (click)="delete(user.id)">Supprimer</button></div>
+        </div>
+        
+    </div>
+</div>

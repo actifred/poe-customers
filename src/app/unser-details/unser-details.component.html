@@ -1,0 +1,10 @@
+<div class = "contenant">
+    <div class = "nat-card">
+        <div class="user">id : {{ user.id }} </div>
+        <div class = "user">Firstname : {{ user.firstname }}  </div>
+        <div class="user">Lastname : {{ user.lastname }}</div>
+        <div class="user">Email : {{ user.email }}</div>
+        <img class="img" src={{user.avatar}} alt="">
+        <div><button class = "button" [routerLink]=goUsers()>Retour</button><button class = "button" (click)=delete() [routerLink]=goUsers()>Supprimer</button></div>
+    </div>
+</div>
