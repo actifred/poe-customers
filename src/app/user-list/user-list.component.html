@@ -1,0 +1,6 @@
+<div class="toolbar">
+    <button (click)="loadUsers()">Charger les utilisateurs</button>
+</div>
+<div class="user-list">
+    <nat-user-card *ngFor="let user of users" [currentUser]="user"></nat-user-card>
+</div>

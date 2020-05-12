@@ -1,0 +1,6 @@
+<p>Détails pour l'utilisateur {{ currentUserName }}</p>
+<div *ngIf="currentUser">
+    <h3>{{ currentUser | userFullName }}</h3>
+    <img class="user-avatar" [src]="currentUser.picture.large">
+</div>
+<button (click)="nextUser()">Voir le suivant</button>

@@ -9,5 +9,4 @@ export class AppComponent {
   title = 'nat-customer-manager';
 
   displaySidebar = false;
-
 }
