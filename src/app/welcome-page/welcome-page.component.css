@@ -2,7 +2,15 @@
     border: solid 1px #264653;
     margin: 10px 40px;
     text-align: center;
+    text-decoration: none;
     background-color: #2a9d8f;
     color: #eeeeee;
     font-family: Arial;
+}
+a{ color: #eeeeee;
+    
+}
+a:hover {
+    background-color:greenyellow;
+    color:black
 }

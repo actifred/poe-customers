@@ -13,6 +13,7 @@ import { TopMenuComponent } from './layout/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { FormAddComponent } from './form-add/form-add.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SidebarComponent,
     UserListComponent,
     UserDetailsComponent,
+    FormAddComponent,
   
     
   ],
