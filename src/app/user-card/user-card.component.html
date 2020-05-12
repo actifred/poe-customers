@@ -1,0 +1,9 @@
+
+
+<div class="user-card">
+    <div class="user-name">
+        <a [routerLink]="getUserDetailUrl()" >   <img class="user-avatar" [src]="paramUser.avatar"> </a>
+    <p>{{ paramUser.firstname }} {{ paramUser.lastname }}</p>
+        <p>Email: {{ paramUser.email }}</p>
+    </div>
+</div>

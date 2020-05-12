@@ -1,5 +1,8 @@
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,13 +14,28 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { TopMenuComponent } from './layout/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ListUserPageComponent } from './list-user-page/list-user-page.component';
+import { DetailUserPageComponent } from './detail-user-page/detail-user-page.component';
+import { UserCardComponent } from './user-card/user-card.component';
+
+//import {TableModule} from 'primeng/table';
+
+// export interface userColumnsTable {
+//   firstname;
+//   lastname;
+//   email;
+// }
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     TopMenuComponent,
-    SidebarComponent
+    SidebarComponent,
+    ListUserPageComponent,
+    DetailUserPageComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +43,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SidebarModule,
     FontAwesomeModule,
     AppRoutingModule
+    //ScrollingModule,
+    //TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

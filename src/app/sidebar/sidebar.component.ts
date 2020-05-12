@@ -20,4 +20,8 @@ export class SidebarComponent implements OnInit {
     this.hideSidebar.emit();
   }
 
+  public getUrlListUser() {
+    return "listUser";
+      }
+
 }
