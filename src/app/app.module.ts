@@ -2,7 +2,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,13 +18,9 @@ import { ListUserPageComponent } from './list-user-page/list-user-page.component
 import { DetailUserPageComponent } from './detail-user-page/detail-user-page.component';
 import { UserCardComponent } from './user-card/user-card.component';
 
-//import {TableModule} from 'primeng/table';
+import { UserServicesService } from './user-services.service';
 
-// export interface userColumnsTable {
-//   firstname;
-//   lastname;
-//   email;
-// }
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -42,11 +38,11 @@ import { UserCardComponent } from './user-card/user-card.component';
     BrowserAnimationsModule,
     SidebarModule,
     FontAwesomeModule,
-    AppRoutingModule
-    //ScrollingModule,
-    //TableModule
+    AppRoutingModule,
+    ScrollingModule,
+    TableModule
   ],
-  providers: [],
+  providers: [UserServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
