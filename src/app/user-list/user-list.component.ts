@@ -23,4 +23,8 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.userSub.unsubscribe();
   }
 
+  removeUser(userid) {
+    console.log('removal of user ' + userid);
+  }
+
 }
