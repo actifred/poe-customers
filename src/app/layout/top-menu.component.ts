@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-top-menu',
@@ -7,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./top-menu.component.css']
 })
 export class TopMenuComponent implements OnInit {
-
+  @Input() user;
   public faBars = faBars;
 
   @Output() showSidebar = new EventEmitter();

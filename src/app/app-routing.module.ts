@@ -4,6 +4,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormAddComponent } from './form-add/form-add.component';
+import { FormUpdateComponent } from './form-update/form-update.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
 {
   path:"addForm",
   component:FormAddComponent
+},
+{
+  path:"updateForm/:ID",
+  component:FormUpdateComponent
 }
 ];
 

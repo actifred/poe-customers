@@ -32,4 +32,8 @@ export class UserListComponent implements OnInit {
   getliens(valeur: number) {
     return `/detail/${valeur}`
   }
+  modifliens(valeur: number) {
+    return `/updateForm/${valeur}`
+  }
+  
 }

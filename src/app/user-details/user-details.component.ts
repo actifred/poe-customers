@@ -11,7 +11,7 @@ import { dbAccesServices } from '../services/dbAcces.services';
 export class UserDetailsComponent implements OnInit {
   private currentID;
   public currentUser;
-  constructor(private activatedRoute: ActivatedRoute, private http: dbAccesServices) {
+  constructor(private activatedRoute: ActivatedRoute, private http: dbAccesServices,private router: Router,) {
     this.currentUser=null;
   }
 
@@ -30,6 +30,7 @@ export class UserDetailsComponent implements OnInit {
     this.http.deleteUser(id).subscribe(res => {
     errors = res;
     console.log(" error:" + errors)
+    this.router.navigate(["listUser"]);
     });
   }
 

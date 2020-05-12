@@ -19,12 +19,6 @@ export class dbAccesServices {
       return this.http.get(this.url + id);
     }
     addUser(user: any): Observable<any> {
-      
-      this.http.get(this.url).subscribe((resultat:[])=>{
-        this.lastid=resultat.length
-      });     
-        
-      return this.http.post(this.lastid,this.url,user);   
-        
+      return this.http.post(this.url,user)  
     }
   }

@@ -10,12 +10,15 @@ import { dbAccesServices } from '../services/dbAcces.services';
 })
 export class FormAddComponent implements OnInit {
   public formulaire=null;
+  private error;
   constructor(private http:dbAccesServices) {}
 
   traiteFormulaire(valeur) {
-    console.log(valeur);
-      this.http.addUser(valeur);
-      console.log(valeur);
+    
+      this.http.addUser(valeur).subscribe((error:any)=>{
+        this.error=error;     
+        console.log(valeur); })
+        
   }
   ngOnInit(): void {
   }

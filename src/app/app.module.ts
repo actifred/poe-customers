@@ -16,6 +16,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormAddComponent } from './form-add/form-add.component';
 import { dbAccesServices } from './services/dbAcces.services';
 import { FormsModule } from '@angular/forms';
+import { FormUpdateComponent } from './form-update/form-update.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     UserListComponent,
     UserDetailsComponent,
     FormAddComponent,
+    FormUpdateComponent,
   
     
   ],
