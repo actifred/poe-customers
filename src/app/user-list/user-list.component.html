@@ -1,5 +1,27 @@
 
 
+<!-- 
 <div class="userListe" *ngFor = "let user of  userlist">
     <span>{{user.firstname}}  {{user.lastname}}  <a [routerLink]="getliens(user.id)">détails</a> </span>
 </div>
+-->
+<p-table [value]="userlist">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nom </th>
+            <th>Prenom </th>
+            <th>Email </th>
+            <th>Photo</th>
+            <th>Command</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user >
+        <tr>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
+            <td><img class="user-avatar" [src]="user.avatar"></td>
+            <td><p><a [routerLink]="getliens(user.id)">détails</a></p><p><button>Supprimer</button></p></td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -7,11 +7,11 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   { 
-    path: "old",
+    path: "",
     component: WelcomePageComponent
   },
   { 
-    path: "",
+    path: "listUser",
     component: UserListComponent
   },
 { 

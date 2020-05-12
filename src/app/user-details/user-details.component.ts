@@ -17,12 +17,12 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params: Params) => {
-        this.http.get(`http://localhost:3000/users?id=` + params['ID']).subscribe(
+        this.http.get(`http://localhost:3000/users/` + params['ID']).subscribe(
           (resultat: any) => {
           this.currentUser = resultat;
-            console.log("currentUser", this.currentUser) ;
+          console.log("currentUser", this.currentUser) ;
           });
-      })
+      });
   }
 
 }

@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {TableModule} from 'primeng/table';
 import { SidebarModule } from 'primeng/sidebar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -23,6 +23,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SidebarComponent,
     UserListComponent,
     UserDetailsComponent,
+  
     
   ],
   imports: [
@@ -31,7 +32,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SidebarModule,
     FontAwesomeModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

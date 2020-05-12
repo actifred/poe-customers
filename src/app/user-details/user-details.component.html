@@ -1,6 +1,6 @@
 <div *ngIf="currentUser">
-<span>Nom : {{currentUser.firstname}}</span>
-<span>Prenom : {{currentUser.lastname}}</span>
-<span>Email : {{currentUser.email}}</span>
-<span><img src="currentUser.avatar" alt="{{currentUser.avatar}}"></span>
+<p>Nom : {{currentUser.firstname}}</p>
+<p>Prenom : {{currentUser.lastname}}</p>
+<p>Email : {{currentUser.email}}</p>
+<p><img class="user-avatar" [src]="currentUser.avatar"></p>
 </div>

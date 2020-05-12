@@ -19,5 +19,6 @@ export class SidebarComponent implements OnInit {
   public onHide() {
     this.hideSidebar.emit();
   }
+  
 
 }
