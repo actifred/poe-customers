@@ -1,3 +1,7 @@
 <p-sidebar [visible]="displaySidebar" (onHide)="onHide()" styleClass="ui-sidebar-sm">
-    Content
+    <ul>
+        <li *ngFor="let lien of liens">
+        <a [routerLink]="lien.url">{{ lien.intitule}}</a>
+        </li>
+    </ul>
 </p-sidebar>

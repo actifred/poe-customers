@@ -11,22 +11,29 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { TopMenuComponent } from './layout/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ListeCustomersComponent } from './liste-customers/liste-customers.component';
+import { FicheCustomerComponent } from './fiche-customer/fiche-customer.component';
+import { UserManagerService } from './services/user-manager.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     TopMenuComponent,
-    SidebarComponent
+    SidebarComponent,
+    ListeCustomersComponent,
+    FicheCustomerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     SidebarModule,
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

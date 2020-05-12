@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { ObjetLien } from '../shared/structures';
 
 @Component({
   selector: 'app-top-menu',
@@ -8,6 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class TopMenuComponent implements OnInit {
 
+  private liens: ObjetLien[];
   public faBars = faBars;
 
   @Output() showSidebar = new EventEmitter();
@@ -15,6 +17,11 @@ export class TopMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.liens = [
+      { url: '/', intitule: 'Accueil!' },
+      { url: '/liste', intitule: 'Liste des clients' }
+    ];
+
   }
 
   public onMenuButtonClick(event) {
