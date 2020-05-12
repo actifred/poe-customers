@@ -1,1 +1,15 @@
-<p>form-add works!</p>
+<h2>Inserer un utilisateur</h2>
+
+<form class="monformulaire"
+    #monFormulaire="ngForm"
+    (ngSubmit)="traiteFormulaire(monFormulaire.value)"
+>
+    <label for="prenom">Prénom</label>
+    <input type="text" name="lastname" ngModel><br/>
+    <label for="nom">Nom</label>
+    <input type="text" name="firstname" ngModel><br/>
+    <label for="email">Email</label>
+    <input type="text" name="email" ngModel><br/>
+    <button type="submit">Ajouter</button>
+</form>
+

@@ -14,6 +14,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormAddComponent } from './form-add/form-add.component';
+import { dbAccesServices } from './services/dbAcces.services';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,9 +37,10 @@ import { FormAddComponent } from './form-add/form-add.component';
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
-    TableModule
+    TableModule,  
+    FormsModule,
   ],
-  providers: [],
+  providers: [dbAccesServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
