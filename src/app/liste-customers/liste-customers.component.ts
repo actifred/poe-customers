@@ -8,7 +8,7 @@ import { UserManagerService } from '../services/user-manager.service';
 })
 export class ListeCustomersComponent implements OnInit {
   public users = [];
-
+  
   constructor(private userManager: UserManagerService) { }
 
   ngOnInit(): void {

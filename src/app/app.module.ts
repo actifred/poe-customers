@@ -15,6 +15,8 @@ import { ListeCustomersComponent } from './liste-customers/liste-customers.compo
 import { FicheCustomerComponent } from './fiche-customer/fiche-customer.component';
 import { UserManagerService } from './services/user-manager.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LigneListeCustomersComponent } from './ligne-liste-customers/ligne-liste-customers.component';
+import { DetailCustomerComponent } from './detail-customer/detail-customer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     TopMenuComponent,
     SidebarComponent,
     ListeCustomersComponent,
-    FicheCustomerComponent
+    FicheCustomerComponent,
+    LigneListeCustomersComponent,
+    DetailCustomerComponent
   ],
   imports: [
     BrowserModule,
