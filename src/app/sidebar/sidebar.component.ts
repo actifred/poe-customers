@@ -11,6 +11,11 @@ export class SidebarComponent implements OnInit {
 
   @Output() hideSidebar = new EventEmitter();
 
+  public liens = [
+    { url: '/', intitule: 'Accueil'},
+    { url: '/users', intitule: 'Utilisateurs'}
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
